@@ -23,6 +23,7 @@ public class MarkdownParse {
                 char chkEM = markdown.charAt(openBracket-1);
                 if((chkEM=='!')) flag=false;
             }
+            if(openParen-closeBracket!=1) flag = false;
             if(flag) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
