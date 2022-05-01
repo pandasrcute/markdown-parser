@@ -68,5 +68,4 @@ public class MarkdownParseTest {
         ArrayList<String> actual = MarkdownParse.getLinks(contents);
         assertEquals(expected,actual);
     }
-    
 }
