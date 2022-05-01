@@ -25,6 +25,7 @@ public class MarkdownParse {
             }
             if(openParen-closeBracket!=1) flag = false;
             if(closeParen-openParen==1) flag = false;
+            if(closeBracket-openBracket==1) flag = false;
             if(flag) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
