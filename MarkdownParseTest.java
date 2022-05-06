@@ -66,6 +66,6 @@ public class MarkdownParseTest {
         ArrayList<String> expected = new ArrayList<String>();
         expected.add("https://something.com");
         ArrayList<String> actual = MarkdownParse.getLinks(contents);
-        assertEquals(expected,actual);
+        assertEquals(expected,actual);  
     }
 }
