@@ -43,5 +43,5 @@ public class MarkdownParse {
 	    System.out.println(links);   
     }
 
-    //testing commit after adding ssh key again!
+    //change for git commands step in lab report 3 part 2
 }
