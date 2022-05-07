@@ -43,6 +43,4 @@ public class MarkdownParse {
 	    System.out.println(links);   
     }
 
-     // making a change using vim on remote
-    //change for git commands step in lab report 3
 }
