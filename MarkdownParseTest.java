@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.junit.*;
 public class MarkdownParseTest {
+
     @Test
     public void addition() {
         assertEquals(2, 1+1);
@@ -65,6 +66,45 @@ public class MarkdownParseTest {
         String contents = Files.readString(path2filename);
         ArrayList<String> expected = new ArrayList<String>();
         expected.add("https://something.com");
+        ArrayList<String> actual = MarkdownParse.getLinks(contents);
+        assertEquals(expected,actual);  
+    }
+
+    @Test
+    public void testSnippet1() throws IOException {
+        String filename = "snippet1.md";
+        Path path2filename = Paths.get(filename);
+        String contents = Files.readString(path2filename);
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("`google.com");
+        expected.add("google.com");
+        expected.add("ucsd.edu");
+        ArrayList<String> actual = MarkdownParse.getLinks(contents);
+        assertEquals(expected,actual);  
+    }
+
+    @Test
+    public void testSnippet2() throws IOException {
+        String filename = "snippet2.md";
+        Path path2filename = Paths.get(filename);
+        String contents = Files.readString(path2filename);
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("a.com");
+        expected.add("a.com(())");
+        expected.add("example.com");
+        ArrayList<String> actual = MarkdownParse.getLinks(contents);
+        assertEquals(expected,actual);  
+    }
+
+    @Test
+    public void testSnippet3() throws IOException {
+        String filename = "snippet3.md";
+        Path path2filename = Paths.get(filename);
+        String contents = Files.readString(path2filename);
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("https://www.twitter.com");
+        expected.add("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
+        expected.add("https://cse.ucsd.edu/");
         ArrayList<String> actual = MarkdownParse.getLinks(contents);
         assertEquals(expected,actual);  
     }
