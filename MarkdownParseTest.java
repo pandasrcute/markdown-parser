@@ -10,7 +10,7 @@ import java.util.List;
 
 import org.junit.*;
 public class MarkdownParseTest {
-
+/*
     @Test
     public void addition() {
         assertEquals(2, 1+1);
@@ -69,7 +69,7 @@ public class MarkdownParseTest {
         ArrayList<String> actual = MarkdownParse.getLinks(contents);
         assertEquals(expected,actual);  
     }
-
+*/
     @Test
     public void testSnippet1() throws IOException {
         String filename = "snippet1.md";
