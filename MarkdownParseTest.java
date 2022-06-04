@@ -70,6 +70,7 @@ public class MarkdownParseTest {
         assertEquals(expected,actual);  
     }
 
+    /* 
     @Test
     public void testSnippet1() throws IOException {
         String filename = "snippet1.md";
@@ -108,4 +109,5 @@ public class MarkdownParseTest {
         ArrayList<String> actual = MarkdownParse.getLinks(contents);
         assertEquals(expected,actual);  
     }
+    */
 }
